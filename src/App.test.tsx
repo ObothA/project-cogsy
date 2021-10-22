@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('Renders App correctly', () => {
+test('Renders App correctly.', () => {
   render(<App />);
   const appContainer = screen.getByRole('main');
 
