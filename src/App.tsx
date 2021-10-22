@@ -1,11 +1,13 @@
 import React from 'react';
 
+import Cards from './pages/Cards/Cards';
+
 import './app.css';
 
 function App() {
   return (
     <main className='app-container'>
-      <p>You know what? Let's do this!</p>
+      <Cards />
     </main>
   );
 }
