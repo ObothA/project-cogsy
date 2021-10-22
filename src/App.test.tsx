@@ -4,6 +4,7 @@ import App from './App';
 
 test('Renders App correctly', () => {
   render(<App />);
+
   const appContainer = screen.getByRole('main');
-  expect(appContainer).toBeInTheDocument();
+  expect(appContainer).toHaveClass('app-container');
 });
