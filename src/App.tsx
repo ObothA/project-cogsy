@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Cards from './pages/Cards/Cards';
+import Cards from './pages/cards/Cards';
 
 import './app.css';
 
