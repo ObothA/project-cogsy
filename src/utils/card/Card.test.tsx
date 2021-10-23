@@ -7,5 +7,5 @@ test('Card renders correctly.', () => {
   render(<Card />);
   const cardArticle = screen.getByRole('article');
 
-  expect(cardArticle).toBeInTheDocument();
+  expect(cardArticle).toHaveClass('article-card');
 });
