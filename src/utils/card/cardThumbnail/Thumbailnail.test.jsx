@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 
 import Thumbail from './Thumbail';
 
-test('Card renders correctly.', () => {
+test('Thumbnail renders correctly.', () => {
   render(<Thumbail />);
   const thumbnailContainer = screen.getByTestId('thumbnail');
 
