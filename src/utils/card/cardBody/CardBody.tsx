@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Favourite from './favourite/Favourite';
+import Menu from './menu/Menu';
 
 import './cardBody.css';
 
@@ -22,7 +23,7 @@ export default function CardBody() {
       </section>
       <section data-testid='card-actions' className='row mt-4'>
         <Favourite />
-        <div className='col menu-container'>Col B</div>
+        <Menu />
       </section>
     </section>
   );
