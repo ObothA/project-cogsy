@@ -18,6 +18,7 @@ export default function Menu() {
         <span
           className={`p-1 menu-active-${popoverOpen}`}
           id='popoverMenuTrigger'
+          data-testid='popoverTrigger'
         >
           <HiOutlineDotsVertical />
         </span>
@@ -29,7 +30,9 @@ export default function Menu() {
         toggle={toggle}
         trigger='hover'
       >
-        <PopoverBody>Sed posuere consectetur</PopoverBody>
+        <PopoverBody>
+          <div data-testid='dropdown-menu'>dropdown data.</div>
+        </PopoverBody>
       </Popover>
     </div>
   );
