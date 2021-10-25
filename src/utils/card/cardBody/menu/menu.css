@@ -1,0 +1,18 @@
+.menu-container {
+  text-align: right;
+}
+
+.popover {
+  margin-top: 5px;
+}
+
+.menu-active-false {
+  border-radius: 2px;
+  border: 1px solid #d2d7df;
+}
+
+.menu-active-true {
+  border-radius: 2px;
+  border: 1px solid #aacbff;
+  background-color: #1254ff;
+}
