@@ -4,8 +4,12 @@ import { IconContext } from 'react-icons';
 
 import './favourite.css';
 
-export default function Favourite() {
-  const [active, setActive] = useState(false);
+type FavouriteProps = {
+  defaultActive?: boolean;
+};
+
+export default function Favourite({ defaultActive = false }: FavouriteProps) {
+  const [active, setActive] = useState(defaultActive);
 
   return (
     <div data-testid='favourite' className='col'>

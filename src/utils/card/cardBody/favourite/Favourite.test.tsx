@@ -11,10 +11,17 @@ describe('Favourite renders correctly', () => {
     expect(favourite).toHaveClass('col');
   });
 
-  test('On click, renders filled star icon.', () => {
+  test('On click of inactive Favourite, renders filled star icon.', () => {
     render(<Favourite />);
     const iconSpan = screen.getByTestId('star-icon-span');
     userEvent.click(iconSpan);
     expect(iconSpan).toHaveClass('star-active-true');
+  });
+
+  test('On click of active Favourite, renders an outline star', () => {
+    render(<Favourite defaultActive={true} />);
+    const iconSpan = screen.getByTestId('star-icon-span');
+    userEvent.click(iconSpan);
+    expect(iconSpan).toHaveClass('star-active-false');
   });
 });
