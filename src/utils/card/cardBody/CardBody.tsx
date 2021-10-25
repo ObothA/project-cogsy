@@ -13,7 +13,11 @@ export default function CardBody() {
           Last edited 6 days ago
         </h4>
       </header>
-      <section></section>
+      <section data-testid='description' className='description'>
+        A card is a flexible and extensible content container. It includes a
+        wide variety of content, thumbnails, video,images, subheadings, actions,
+        and content.
+      </section>
       <section></section>
     </section>
   );

@@ -16,4 +16,7 @@ test('Card body renders correctly.', () => {
 
   const subHeading = screen.getByTestId('sub-heading');
   expect(subHeading).toHaveClass('sub-heading');
+
+  const description = screen.getByTestId('description');
+  expect(description).toHaveClass('description');
 });
