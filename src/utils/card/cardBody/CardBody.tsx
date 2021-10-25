@@ -18,7 +18,10 @@ export default function CardBody() {
         wide variety of content, thumbnails, video,images, subheadings, actions,
         and content.
       </section>
-      <section></section>
+      <section data-testid='card-actions' className='row mt-4'>
+        <div className='col'>Col A</div>
+        <div className='col menu-container'>Col B</div>
+      </section>
     </section>
   );
 }

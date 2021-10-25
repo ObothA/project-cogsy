@@ -19,4 +19,7 @@ test('Card body renders correctly.', () => {
 
   const description = screen.getByTestId('description');
   expect(description).toHaveClass('description');
+
+  const cardActions = screen.getByTestId('card-actions');
+  expect(cardActions).toBeInTheDocument();
 });
