@@ -1,4 +1,5 @@
 .article-card {
   border: 1px solid #d2d7df;
   border-radius: 5px;
+  padding: 0px !important;
 }
