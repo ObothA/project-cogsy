@@ -8,7 +8,10 @@ export default function Cards() {
   return (
     <section data-testid='cards-section' className='cards-container p-5'>
       <section className='row'>
-        <Card />
+        <Card
+          heading={'Important Announcement'}
+          subHeading={'Last edited 6 days ago'}
+        />
       </section>
     </section>
   );

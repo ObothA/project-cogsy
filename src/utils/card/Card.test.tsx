@@ -4,7 +4,12 @@ import { render, screen } from '@testing-library/react';
 import Card from './Card';
 
 test('Card renders correctly.', () => {
-  render(<Card />);
+  render(
+    <Card
+      heading={'Important Announcement'}
+      subHeading={'Last edited 6 days ago'}
+    />
+  );
   const cardArticle = screen.getByRole('article');
 
   expect(cardArticle).toHaveClass(
