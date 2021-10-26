@@ -5,54 +5,63 @@ import { Popover, PopoverBody } from 'reactstrap';
 
 import './menu.css';
 
-export default function Menu() {
+type menuProps = {
+  menu: boolean;
+  randomMenuIdentifier: string;
+};
+
+export default function Menu({ menu, randomMenuIdentifier }: menuProps) {
   const [popoverOpen, setPopoverOpen] = useState(false);
 
   const toggle = () => setPopoverOpen(!popoverOpen);
 
   return (
     <div className={`col menu-container`} data-testid='menu-container'>
-      <IconContext.Provider
-        value={{ color: popoverOpen ? 'white' : '#2a2941' }}
-      >
-        <span
-          className={`p-1 menu-active-${popoverOpen}`}
-          id='popoverMenuTrigger'
-          data-testid='popoverTrigger'
-        >
-          <HiOutlineDotsVertical />
-        </span>
-      </IconContext.Provider>
-      <Popover
-        placement='bottom-end'
-        isOpen={popoverOpen}
-        target='popoverMenuTrigger'
-        toggle={toggle}
-        trigger='click'
-      >
-        <PopoverBody>
-          <div data-testid='dropdown-menu'>
-            <div
-              data-testid='dropdown-menu-items'
-              className='dropdown-menu-item'
+      {menu && (
+        <>
+          <IconContext.Provider
+            value={{ color: popoverOpen ? 'white' : '#2a2941' }}
+          >
+            <span
+              className={`p-1 menu-active-${popoverOpen}`}
+              id={randomMenuIdentifier}
+              data-testid='popoverTrigger'
             >
-              Save
-            </div>
-            <div
-              data-testid='dropdown-menu-items'
-              className='dropdown-menu-item'
-            >
-              Edit
-            </div>
-            <div
-              data-testid='dropdown-menu-items'
-              className='dropdown-menu-item'
-            >
-              Preview
-            </div>
-          </div>
-        </PopoverBody>
-      </Popover>
+              <HiOutlineDotsVertical />
+            </span>
+          </IconContext.Provider>
+          <Popover
+            placement='bottom-end'
+            isOpen={popoverOpen}
+            target={randomMenuIdentifier}
+            toggle={toggle}
+            trigger='click'
+          >
+            <PopoverBody>
+              <div data-testid='dropdown-menu'>
+                <div
+                  data-testid='dropdown-menu-items'
+                  className='dropdown-menu-item'
+                >
+                  Save
+                </div>
+                <div
+                  data-testid='dropdown-menu-items'
+                  className='dropdown-menu-item'
+                >
+                  Edit
+                </div>
+                <div
+                  data-testid='dropdown-menu-items'
+                  className='dropdown-menu-item'
+                >
+                  Preview
+                </div>
+              </div>
+            </PopoverBody>
+          </Popover>
+        </>
+      )}
     </div>
   );
 }

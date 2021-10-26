@@ -5,25 +5,43 @@ import Menu from './menu/Menu';
 
 import './cardBody.css';
 
-export default function CardBody() {
+type cardBodyProps = {
+  heading: string;
+  subHeading: string;
+  description?: string;
+  favourite: boolean;
+  menu: boolean;
+  randomMenuIdentifier: string;
+  defaultActive?: boolean;
+};
+
+export default function CardBody({
+  heading,
+  subHeading,
+  description,
+  favourite,
+  menu,
+  randomMenuIdentifier,
+  defaultActive,
+}: cardBodyProps) {
   return (
     <section data-testid='card-body' className='p-3'>
       <header data-testid='card-header'>
         <h6 data-testid='main-heading' className='heading'>
-          Important Announcement
+          {heading}
         </h6>
         <h4 data-testid='sub-heading' className='sub-heading'>
-          Last edited 6 days ago
+          {subHeading}
         </h4>
       </header>
-      <section data-testid='description' className='description'>
-        A card is a flexible and extensible content container. It includes a
-        wide variety of content, thumbnails, video,images, subheadings, actions,
-        and content.
-      </section>
+      {description && (
+        <section data-testid='description' className='description'>
+          {description}
+        </section>
+      )}
       <section data-testid='card-actions' className='row mt-4'>
-        <Favourite />
-        <Menu />
+        <Favourite favourite={favourite} defaultActive={defaultActive} />
+        <Menu menu={menu} randomMenuIdentifier={randomMenuIdentifier} />
       </section>
     </section>
   );

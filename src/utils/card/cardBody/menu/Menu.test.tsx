@@ -5,13 +5,13 @@ import Menu from './Menu';
 
 describe('Menu renders correctly', () => {
   test('Menu container has correct class', async () => {
-    render(<Menu />);
+    render(<Menu menu={true} randomMenuIdentifier={'menu-id-unique-1'} />);
     const menuContainer = screen.getByTestId('menu-container');
     expect(menuContainer).toHaveClass('menu-container');
   });
 
   test('Popover trigger works correctly', async () => {
-    render(<Menu />);
+    render(<Menu menu={true} randomMenuIdentifier={'menu-id-unique-2'} />);
     let menuTrigger = screen.getByTestId('popoverTrigger');
     expect(menuTrigger).toHaveClass('p-1 menu-active-false');
   });
@@ -19,7 +19,7 @@ describe('Menu renders correctly', () => {
   test('Hover triggers dropdown.', async () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    render(<Menu />);
+    render(<Menu menu={true} randomMenuIdentifier={'menu-id-unique-3'} />);
     let menuTrigger = screen.getByTestId('popoverTrigger');
     userEvent.click(menuTrigger);
 
@@ -29,5 +29,11 @@ describe('Menu renders correctly', () => {
 
     const dropdownItems = screen.getAllByTestId('dropdown-menu-items');
     expect(dropdownItems).toHaveLength(3);
+  });
+
+  test('with false menu prop.', async () => {
+    render(<Menu menu={false} randomMenuIdentifier={'menu-id-unique-4'} />);
+    const menuContainer = screen.queryByTestId('popoverTrigger');
+    expect(menuContainer).toBeNull();
   });
 });
