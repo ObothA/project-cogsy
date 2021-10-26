@@ -10,6 +10,8 @@ describe('Card body renders correctly', () => {
         heading={'Important Announcement'}
         subHeading={'Last edited 6 days ago'}
         description={'This is the test description'}
+        favourite={true}
+        menu={true}
       />
     );
     const cardBody = screen.getByTestId('card-body');
@@ -36,6 +38,8 @@ describe('Card body renders correctly', () => {
       <CardBody
         heading={'Important Announcement'}
         subHeading={'Last edited 6 days ago'}
+        favourite={true}
+        menu={true}
       />
     );
 

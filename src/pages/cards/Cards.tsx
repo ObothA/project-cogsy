@@ -11,6 +11,11 @@ export default function Cards() {
         <Card
           heading={'Important Announcement'}
           subHeading={'Last edited 6 days ago'}
+          description={
+            'A card is a flexible and extensible content container. It includes a wide variety of content, thumbnails, video,images, subheadings, actions, and content.'
+          }
+          favourite={false}
+          menu={false}
         />
       </section>
     </section>

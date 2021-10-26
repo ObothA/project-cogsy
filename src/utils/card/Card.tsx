@@ -10,21 +10,19 @@ type cardProps = {
   subHeading: string;
   thumbnailLink?: string;
   assetLink?: string;
+  description?: string;
+  favourite: boolean;
+  menu: boolean;
 };
 
-export default function Card({
-  heading,
-  subHeading,
-  thumbnailLink,
-  assetLink,
-}: cardProps) {
-  const description =
-    'A card is a flexible and extensible content container. It includes a wide variety of content, thumbnails, video,images, subheadings, actions, and content.';
-
+export default function Card(props: cardProps) {
   return (
     <article className='article-card col-xs-12 col-sm-5 col-md-4 col-lg-4 col-xl-3 col-xxl-2'>
-      <Thumbail thumbnailLink={thumbnailLink} assetLink={assetLink} />
-      <CardBody heading={heading} subHeading={subHeading} />
+      <Thumbail
+        thumbnailLink={props.thumbnailLink}
+        assetLink={props.assetLink}
+      />
+      <CardBody {...props} />
     </article>
   );
 }
