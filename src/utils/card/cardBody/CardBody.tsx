@@ -5,15 +5,20 @@ import Menu from './menu/Menu';
 
 import './cardBody.css';
 
-export default function CardBody() {
+type cardBodyProps = {
+  heading: string;
+  subHeading: string;
+};
+
+export default function CardBody({ heading, subHeading }: cardBodyProps) {
   return (
     <section data-testid='card-body' className='p-3'>
       <header data-testid='card-header'>
         <h6 data-testid='main-heading' className='heading'>
-          Important Announcement
+          {heading}
         </h6>
         <h4 data-testid='sub-heading' className='sub-heading'>
-          Last edited 6 days ago
+          {subHeading}
         </h4>
       </header>
       <section data-testid='description' className='description'>

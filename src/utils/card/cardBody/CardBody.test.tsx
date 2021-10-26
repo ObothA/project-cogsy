@@ -4,7 +4,12 @@ import { render, screen } from '@testing-library/react';
 import CardBody from './CardBody';
 
 test('Card body renders correctly.', () => {
-  render(<CardBody />);
+  render(
+    <CardBody
+      heading={'Important Announcement'}
+      subHeading={'Last edited 6 days ago'}
+    />
+  );
   const cardBody = screen.getByTestId('card-body');
   expect(cardBody).toBeInTheDocument();
 
