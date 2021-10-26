@@ -38,6 +38,7 @@ export default function Cards() {
           subHeading={'Last edited 2 days ago'}
           menu={true}
           favourite={true}
+          defaultActive={true}
           randomMenuIdentifier={'id-card-3'}
         />
       </section>

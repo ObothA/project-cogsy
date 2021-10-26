@@ -12,6 +12,7 @@ describe('Card body renders correctly', () => {
         description={'This is the test description'}
         favourite={true}
         menu={true}
+        randomMenuIdentifier={'menu-id-unique-1'}
       />
     );
     const cardBody = screen.getByTestId('card-body');
@@ -40,6 +41,7 @@ describe('Card body renders correctly', () => {
         subHeading={'Last edited 6 days ago'}
         favourite={true}
         menu={true}
+        randomMenuIdentifier={'menu-id-unique-2'}
       />
     );
 

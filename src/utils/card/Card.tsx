@@ -14,6 +14,7 @@ type cardProps = {
   favourite: boolean;
   menu: boolean;
   randomMenuIdentifier: string;
+  defaultActive?: boolean;
 };
 
 export default function Card(props: cardProps) {
