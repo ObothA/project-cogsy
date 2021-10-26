@@ -7,9 +7,10 @@ import './menu.css';
 
 type menuProps = {
   menu: boolean;
+  randomMenuIdentifier: string;
 };
 
-export default function Menu({ menu }: menuProps) {
+export default function Menu({ menu, randomMenuIdentifier }: menuProps) {
   const [popoverOpen, setPopoverOpen] = useState(false);
 
   const toggle = () => setPopoverOpen(!popoverOpen);
@@ -23,7 +24,7 @@ export default function Menu({ menu }: menuProps) {
           >
             <span
               className={`p-1 menu-active-${popoverOpen}`}
-              id='popoverMenuTrigger'
+              id={randomMenuIdentifier}
               data-testid='popoverTrigger'
             >
               <HiOutlineDotsVertical />
@@ -32,7 +33,7 @@ export default function Menu({ menu }: menuProps) {
           <Popover
             placement='bottom-end'
             isOpen={popoverOpen}
-            target='popoverMenuTrigger'
+            target={randomMenuIdentifier}
             toggle={toggle}
             trigger='click'
           >

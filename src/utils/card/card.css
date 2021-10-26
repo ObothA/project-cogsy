@@ -2,4 +2,7 @@
   border: 1px solid #d2d7df;
   border-radius: 5px;
   padding: 0px !important;
+  margin-right: 32px;
+  margin-bottom: 32px;
+  height: fit-content;
 }

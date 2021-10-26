@@ -11,6 +11,7 @@ type cardBodyProps = {
   description?: string;
   favourite: boolean;
   menu: boolean;
+  randomMenuIdentifier: string;
 };
 
 export default function CardBody({
@@ -19,6 +20,7 @@ export default function CardBody({
   description,
   favourite,
   menu,
+  randomMenuIdentifier,
 }: cardBodyProps) {
   return (
     <section data-testid='card-body' className='p-3'>
@@ -37,7 +39,7 @@ export default function CardBody({
       )}
       <section data-testid='card-actions' className='row mt-4'>
         <Favourite favourite={favourite} />
-        <Menu menu={menu} />
+        <Menu menu={menu} randomMenuIdentifier={randomMenuIdentifier} />
       </section>
     </section>
   );
