@@ -8,9 +8,14 @@ import './cardBody.css';
 type cardBodyProps = {
   heading: string;
   subHeading: string;
+  description?: string;
 };
 
-export default function CardBody({ heading, subHeading }: cardBodyProps) {
+export default function CardBody({
+  heading,
+  subHeading,
+  description,
+}: cardBodyProps) {
   return (
     <section data-testid='card-body' className='p-3'>
       <header data-testid='card-header'>
@@ -21,11 +26,11 @@ export default function CardBody({ heading, subHeading }: cardBodyProps) {
           {subHeading}
         </h4>
       </header>
-      <section data-testid='description' className='description'>
-        A card is a flexible and extensible content container. It includes a
-        wide variety of content, thumbnails, video,images, subheadings, actions,
-        and content.
-      </section>
+      {description && (
+        <section data-testid='description' className='description'>
+          {description}
+        </section>
+      )}
       <section data-testid='card-actions' className='row mt-4'>
         <Favourite />
         <Menu />

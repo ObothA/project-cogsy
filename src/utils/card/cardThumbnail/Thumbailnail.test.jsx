@@ -30,4 +30,28 @@ describe('Thumbnail renders correctly.', () => {
     const thumbnailImage = screen.queryByRole('img');
     expect(thumbnailImage).not.toBeInTheDocument();
   });
+
+  test('With only assetLink prop.', () => {
+    render(<Thumbail assetLink={mainAsset} />);
+    const thumbnailContainer = screen.getByTestId('thumbnail');
+    expect(thumbnailContainer).toBeInTheDocument();
+
+    const assetLink = screen.queryByRole('link');
+    expect(assetLink).not.toBeInTheDocument();
+
+    const thumbnailImage = screen.queryByRole('img');
+    expect(thumbnailImage).not.toBeInTheDocument();
+  });
+
+  test('With only thumbnailLink prop.', () => {
+    render(<Thumbail thumbnailLink={thumbnailImg} />);
+    const thumbnailContainer = screen.getByTestId('thumbnail');
+    expect(thumbnailContainer).toBeInTheDocument();
+
+    const assetLink = screen.queryByRole('link');
+    expect(assetLink).not.toBeInTheDocument();
+
+    const thumbnailImage = screen.queryByRole('img');
+    expect(thumbnailImage).not.toBeInTheDocument();
+  });
 });
