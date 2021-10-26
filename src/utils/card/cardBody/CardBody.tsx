@@ -9,12 +9,16 @@ type cardBodyProps = {
   heading: string;
   subHeading: string;
   description?: string;
+  favourite: boolean;
+  menu: boolean;
 };
 
 export default function CardBody({
   heading,
   subHeading,
   description,
+  favourite,
+  menu,
 }: cardBodyProps) {
   return (
     <section data-testid='card-body' className='p-3'>
@@ -32,8 +36,8 @@ export default function CardBody({
         </section>
       )}
       <section data-testid='card-actions' className='row mt-4'>
-        <Favourite />
-        <Menu />
+        <Favourite favourite={favourite} />
+        <Menu menu={menu} />
       </section>
     </section>
   );

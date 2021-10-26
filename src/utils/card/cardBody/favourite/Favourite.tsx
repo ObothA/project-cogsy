@@ -15,9 +15,9 @@ export default function Favourite({
 }: FavouriteProps) {
   const [active, setActive] = useState(defaultActive);
 
-  if (favourite) {
-    return (
-      <div data-testid='favourite' className='col'>
+  return (
+    <div data-testid='favourite' className='col'>
+      {favourite && (
         <IconContext.Provider value={{ color: '#2a2941', size: '18px' }}>
           <span
             className={`icon-container star-active-${active}`}
@@ -27,9 +27,7 @@ export default function Favourite({
             {active ? <AiFillStar /> : <AiOutlineStar />}
           </span>
         </IconContext.Provider>
-      </div>
-    );
-  }
-
-  return <div data-testid='favourite' className='col' />;
+      )}
+    </div>
+  );
 }
