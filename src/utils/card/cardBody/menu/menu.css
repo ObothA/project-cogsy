@@ -3,16 +3,37 @@
 }
 
 .popover {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .menu-active-false {
   border-radius: 2px;
   border: 1px solid #d2d7df;
+  cursor: pointer;
 }
 
 .menu-active-true {
   border-radius: 2px;
   border: 1px solid #aacbff;
   background-color: #1254ff;
+  cursor: pointer;
+}
+
+.dropdown-menu-item {
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 24px;
+}
+
+.dropdown-menu-item:hover {
+  background-color: #1254ff;
+  color: white;
+  cursor: pointer;
+}
+
+.popover-body {
+  padding: 0 !important;
 }

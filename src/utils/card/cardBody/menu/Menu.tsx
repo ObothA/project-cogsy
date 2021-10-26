@@ -28,10 +28,29 @@ export default function Menu() {
         isOpen={popoverOpen}
         target='popoverMenuTrigger'
         toggle={toggle}
-        trigger='hover'
+        trigger='click'
       >
         <PopoverBody>
-          <div data-testid='dropdown-menu'>dropdown data.</div>
+          <div data-testid='dropdown-menu'>
+            <div
+              data-testid='dropdown-menu-items'
+              className='dropdown-menu-item'
+            >
+              Save
+            </div>
+            <div
+              data-testid='dropdown-menu-items'
+              className='dropdown-menu-item'
+            >
+              Edit
+            </div>
+            <div
+              data-testid='dropdown-menu-items'
+              className='dropdown-menu-item'
+            >
+              Preview
+            </div>
+          </div>
         </PopoverBody>
       </Popover>
     </div>

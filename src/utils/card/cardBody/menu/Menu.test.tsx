@@ -1,13 +1,9 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import Menu from './Menu';
 
 describe('Menu renders correctly', () => {
-  beforeEach(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => {});
-  });
-
   test('Menu container has correct class', async () => {
     render(<Menu />);
     const menuContainer = screen.getByTestId('menu-container');
@@ -21,12 +17,17 @@ describe('Menu renders correctly', () => {
   });
 
   test('Hover triggers dropdown.', async () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
     render(<Menu />);
     let menuTrigger = screen.getByTestId('popoverTrigger');
-    userEvent.hover(menuTrigger);
+    userEvent.click(menuTrigger);
 
     const dropdownMenu = await screen.findByTestId('dropdown-menu');
     expect(dropdownMenu).toBeInTheDocument();
     expect(menuTrigger).toHaveClass('menu-active-true');
+
+    const dropdownItems = screen.getAllByTestId('dropdown-menu-items');
+    expect(dropdownItems).toHaveLength(3);
   });
 });
