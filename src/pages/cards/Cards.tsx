@@ -66,7 +66,9 @@ export default function Cards() {
           favourite={true}
           thumbnailLink={videoThumbnail}
           assetLink={videoFile}
-          heading={'Sample video thumbnail'}
+          heading={
+            'Announcement! Sample video thumbnail. Unleash the video cards'
+          }
           subHeading={'Last edited 6 days ago'}
         />
       </section>

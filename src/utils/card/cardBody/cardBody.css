@@ -3,6 +3,13 @@
   line-height: 32px;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .sub-heading {
   font-size: 16px;
   line-height: 24px;
