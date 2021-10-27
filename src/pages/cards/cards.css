@@ -2,3 +2,7 @@
   min-height: 80vh;
   padding: 1%;
 }
+
+.cards-row {
+  justify-content: center;
+}
