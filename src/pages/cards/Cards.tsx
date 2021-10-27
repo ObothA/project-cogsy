@@ -61,7 +61,7 @@ export default function Cards() {
         <Card
           {...generalProps}
           randomMenuIdentifier={'id-card-5'}
-          description={''}
+          // description={''}
           menu={true}
           favourite={true}
           thumbnailLink={videoThumbnail}
