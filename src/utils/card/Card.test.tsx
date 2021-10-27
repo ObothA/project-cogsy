@@ -8,6 +8,9 @@ test('Card renders correctly.', () => {
     <Card
       heading={'Important Announcement'}
       subHeading={'Last edited 6 days ago'}
+      randomMenuIdentifier={'id-card-4767578983'}
+      menu={true}
+      favourite={true}
     />
   );
   const cardArticle = screen.getByRole('article');

@@ -2,6 +2,10 @@ import React from 'react';
 
 import Card from '../../utils/card/Card';
 
+import thumbnailImage from '../../assets/img/pexels-jopwell-small.jpg';
+import imageFile from '../../assets/img/pexels-jopwell-original.jpg';
+import videoThumbnail from '../../assets/video/2021-10-26_10-40.png';
+import videoFile from '../../assets/video/pexels-anna-shvets.mp4';
 import './cards.css';
 
 export default function Cards() {
@@ -40,6 +44,30 @@ export default function Cards() {
           favourite={true}
           defaultActive={true}
           randomMenuIdentifier={'id-card-3'}
+        />
+
+        <Card
+          {...generalProps}
+          randomMenuIdentifier={'id-card-4'}
+          description={''}
+          menu={true}
+          favourite={true}
+          thumbnailLink={thumbnailImage}
+          assetLink={imageFile}
+          heading={'Countdown Announcement - Unleashing the power of cards'}
+          subHeading={'Last edited 2 days ago'}
+        />
+
+        <Card
+          {...generalProps}
+          randomMenuIdentifier={'id-card-5'}
+          description={''}
+          menu={true}
+          favourite={true}
+          thumbnailLink={videoThumbnail}
+          assetLink={videoFile}
+          heading={'Sample video thumbnail'}
+          subHeading={'Last edited 2 days ago'}
         />
       </section>
     </section>
