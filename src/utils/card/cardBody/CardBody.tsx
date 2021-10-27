@@ -27,7 +27,7 @@ export default function CardBody({
   return (
     <section data-testid='card-body' className='p-3'>
       <header data-testid='card-header'>
-        <h6 data-testid='main-heading' className='heading'>
+        <h6 data-testid='main-heading' className='heading line-clamp'>
           {heading}
         </h6>
         <h4 data-testid='sub-heading' className='sub-heading'>
