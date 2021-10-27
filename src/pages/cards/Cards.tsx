@@ -67,7 +67,7 @@ export default function Cards() {
           thumbnailLink={videoThumbnail}
           assetLink={videoFile}
           heading={'Sample video thumbnail'}
-          subHeading={'Last edited 2 days ago'}
+          subHeading={'Last edited 6 days ago'}
         />
       </section>
     </section>
